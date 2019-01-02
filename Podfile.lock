@@ -1,0 +1,20 @@
+PODS:
+  - MJExtension (3.0.15.1)
+  - WebViewJavascriptBridge (6.0.3)
+
+DEPENDENCIES:
+  - MJExtension
+  - WebViewJavascriptBridge
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MJExtension
+    - WebViewJavascriptBridge
+
+SPEC CHECKSUMS:
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+
+PODFILE CHECKSUM: 4c5970efa766d27986c51617ce55fe94a6d325a5
+
+COCOAPODS: 1.5.3
