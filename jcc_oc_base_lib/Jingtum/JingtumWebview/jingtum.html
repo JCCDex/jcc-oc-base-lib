@@ -61,5 +61,20 @@
                 responseCallback(false);
             }
         });
+
+        bridge.registerHandler('jingtumSign', function (data, responseCallback) {
+            try {
+                data = JSON.parse(data);
+                var transaction = data.transaction;
+                var seed = {
+                    seed: data.secret
+                }
+                var chain = data.chain;
+                var signature = window.LocalSign(transaction, seed, chain);
+                responseCallback(signature);
+            } catch (error) {
+                responseCallback(null);
+            }
+        });
     });
 </script>

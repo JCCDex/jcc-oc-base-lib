@@ -94,6 +94,26 @@
     }];
 }
 
+- (void)sign:(NSDictionary *)transaction secret:(NSString *)secret chain:(NSString *)chain completion:(void (^)(NSError *, NSString *))completion {
+    __weak typeof(self) weakSelf = self;
+    NSMutableDictionary *parms = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [parms setObject:transaction forKey:@"transaction"];
+    [parms setObject:secret forKey:@"secret"];
+    [parms setObject:chain forKey:@"chain"];
+    NSString *json = [weakSelf dataTojsonString:parms];
+    [_bridge callHandler:@"jingtumSign" data:json responseCallback:^(id responseData) {
+        if ([responseData isKindOfClass:[NSString class]]) {
+            if (completion) {
+                completion(nil, (NSString *)responseData);
+            }
+        } else {
+            if (completion) {
+                completion([weakSelf errorDomain:@"from jingtum.js" reason:@"locally sign unsuccessfully"], nil);
+            }
+        }
+    }];
+}
+
 #pragma mark - WebView
 - (WKWebView *)pureWebView {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];

@@ -22,4 +22,6 @@
 
 - (void)isValidSecret:(NSString *)secret chain:(NSString *)chain completion:(void(^)(BOOL isValid))completion;
 
+- (void)sign:(NSDictionary *)transaction secret:(NSString *)secret chain:(NSString *)chain completion:(void(^)(NSError *error, NSString *signature))completion;
+
 @end
