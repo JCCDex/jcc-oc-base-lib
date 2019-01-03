@@ -53,11 +53,11 @@
 - (void)testCreateBizianWallet {
     __weak typeof(self) weakSelf = self;
     XCTestExpectation *expectation = [self expectationWithDescription:@"create bizian wallet successfully"];
-    [_jtWalletManager createWallet:BIZIAN_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
+    [_jtWalletManager createWallet:BIZAIN_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
         XCTAssertNil(error);
         XCTAssertTrue([wallet isKindOfClass:JingtumWallet.class]);
         NSString __block *address = wallet.address;
-        [weakSelf.jtWalletManager importSecret:wallet.secret chain:BIZIAN_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
+        [weakSelf.jtWalletManager importSecret:wallet.secret chain:BIZAIN_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
             XCTAssertTrue([address isEqualToString:wallet.address]);
             [expectation fulfill];
         }];
@@ -81,12 +81,12 @@
         [e2 fulfill];
     }];
     
-    [_jtWalletManager isValidAddress:@"bDGbTGBLCrSqW54YZrjQ5qQNQKSBX6GJUK" chain:BIZIAN_CHAIN completion:^(BOOL isValid) {
+    [_jtWalletManager isValidAddress:@"bDGbTGBLCrSqW54YZrjQ5qQNQKSBX6GJUK" chain:BIZAIN_CHAIN completion:^(BOOL isValid) {
         XCTAssertTrue(isValid);
         [e3 fulfill];
     }];
     
-    [_jtWalletManager isValidAddress:@"shWSppK2jFUGg2tMhfaLVs7fDWinW" chain:BIZIAN_CHAIN completion:^(BOOL isValid) {
+    [_jtWalletManager isValidAddress:@"shWSppK2jFUGg2tMhfaLVs7fDWinW" chain:BIZAIN_CHAIN completion:^(BOOL isValid) {
         XCTAssertFalse(isValid);
         [e4 fulfill];
     }];
@@ -110,12 +110,12 @@
         [e2 fulfill];
     }];
     
-    [_jtWalletManager isValidSecret:@"shWSppK2jFUGg2tMhfaLVs7fDWinW" chain:BIZIAN_CHAIN completion:^(BOOL isValid) {
+    [_jtWalletManager isValidSecret:@"shWSppK2jFUGg2tMhfaLVs7fDWinW" chain:BIZAIN_CHAIN completion:^(BOOL isValid) {
         XCTAssertTrue(isValid);
         [e3 fulfill];
     }];
     
-    [_jtWalletManager isValidSecret:@"bDGbTGBLCrSqW54YZrjQ5qQNQKSBX6GJUK" chain:BIZIAN_CHAIN completion:^(BOOL isValid) {
+    [_jtWalletManager isValidSecret:@"bDGbTGBLCrSqW54YZrjQ5qQNQKSBX6GJUK" chain:BIZAIN_CHAIN completion:^(BOOL isValid) {
         XCTAssertFalse(isValid);
         [e4 fulfill];
     }];

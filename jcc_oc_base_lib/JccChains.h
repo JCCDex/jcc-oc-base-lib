@@ -11,6 +11,6 @@
 
 
 #define SWTC_CHAIN @"swt"
-#define BIZIAN_CHAIN @"bwt"
+#define BIZAIN_CHAIN @"bwt"
 
 #endif /* JccChains_h */
