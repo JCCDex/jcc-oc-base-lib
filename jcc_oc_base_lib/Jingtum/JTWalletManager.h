@@ -14,11 +14,9 @@
 
 + (instancetype)shareInstance;
 
-- (void)initJingtumWebview;
+- (void)createWallet:(NSString *)chain completion:(void(^)(NSError *error, JingtumWallet *wallet))completion;
 
-- (void)createWallet:(NSString *)chain completion:(void(^)(JingtumWallet *wallet, NSError *error))completion;
-
-- (void)importSecret:(NSString *)secret chain:(NSString *)chain completion:(void(^)(JingtumWallet *wallet, NSError *error))completion;
+- (void)importSecret:(NSString *)secret chain:(NSString *)chain completion:(void(^)(NSError *error, JingtumWallet *wallet))completion;
 
 - (void)isValidAddress:(NSString *)address chain:(NSString *)chain completion:(void(^)(BOOL isValid))completion;
 

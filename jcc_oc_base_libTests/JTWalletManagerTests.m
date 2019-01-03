@@ -27,8 +27,9 @@
 
 - (void)testCreateMoacWallet {
     XCTestExpectation *expectation = [self expectationWithDescription:@"create moac wallet unsuccessfully"];
-    [_jtWalletManager createWallet: @"moac" completion:^(JingtumWallet *wallet, NSError *error) {
+    [_jtWalletManager createWallet: @"moac" completion:^(NSError *error, JingtumWallet *wallet) {
         XCTAssertNil(wallet);
+        XCTAssertNotNil(error);
         [expectation fulfill];
     }];
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
@@ -37,11 +38,11 @@
 - (void)testCreateJingtumWallet {
     __weak typeof(self) weakSelf = self;
     XCTestExpectation *expectation = [self expectationWithDescription:@"create jingtum wallet successfully"];
-    [_jtWalletManager createWallet:SWTC_CHAIN completion:^(JingtumWallet *wallet, NSError *error) {
+    [_jtWalletManager createWallet:SWTC_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
         XCTAssertNil(error);
         XCTAssertTrue([wallet isKindOfClass:JingtumWallet.class]);
         NSString __block *address = wallet.address;
-        [weakSelf.jtWalletManager importSecret:wallet.secret chain:SWTC_CHAIN completion:^(JingtumWallet *wallet, NSError *error) {
+        [weakSelf.jtWalletManager importSecret:wallet.secret chain:SWTC_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
             XCTAssertTrue([address isEqualToString:wallet.address]);
             [expectation fulfill];
         }];
@@ -52,11 +53,11 @@
 - (void)testCreateBizianWallet {
     __weak typeof(self) weakSelf = self;
     XCTestExpectation *expectation = [self expectationWithDescription:@"create bizian wallet successfully"];
-    [_jtWalletManager createWallet:BIZIAN_CHAIN  completion:^(JingtumWallet *wallet, NSError *error) {
+    [_jtWalletManager createWallet:BIZIAN_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
         XCTAssertNil(error);
         XCTAssertTrue([wallet isKindOfClass:JingtumWallet.class]);
         NSString __block *address = wallet.address;
-        [weakSelf.jtWalletManager importSecret:wallet.secret chain:BIZIAN_CHAIN completion:^(JingtumWallet *wallet, NSError *error) {
+        [weakSelf.jtWalletManager importSecret:wallet.secret chain:BIZIAN_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
             XCTAssertTrue([address isEqualToString:wallet.address]);
             [expectation fulfill];
         }];

@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B3288C058B8336B13951348 /* libPods-jcc_oc_base_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9A5FCF0E26C26683444470 /* libPods-jcc_oc_base_lib.a */; };
 		6D502D23613E4DDFD09A0AE3 /* libPods-jcc_oc_base_libTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CC6DBB12E2B555A97B38F /* libPods-jcc_oc_base_libTests.a */; };
-		9E03883921DC9F2D001061B5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9E03883721DC9F2D001061B5 /* index.html */; };
 		9E03883A21DC9F2D001061B5 /* jingtum.js in Resources */ = {isa = PBXBuildFile; fileRef = 9E03883821DC9F2D001061B5 /* jingtum.js */; };
-		9E03884921DCB090001061B5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9E03883721DC9F2D001061B5 /* index.html */; };
 		9E03884A21DCB138001061B5 /* jingtum.js in Resources */ = {isa = PBXBuildFile; fileRef = 9E03883821DC9F2D001061B5 /* jingtum.js */; };
 		9E30263021DC5311002A88ED /* jcc_oc_base_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E30262621DC5311002A88ED /* jcc_oc_base_lib.framework */; };
 		9E30265221DC69C2002A88ED /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9E30265121DC69C2002A88ED /* Podfile */; };
@@ -23,6 +21,8 @@
 		9EBDBAEC21DCBE93003196DF /* JingtumWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDBAEA21DCBE93003196DF /* JingtumWallet.m */; };
 		9EBDBAF321DCBEF6003196DF /* BaseWallet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EBDBAF121DCBEF6003196DF /* BaseWallet.h */; };
 		9EBDBAF421DCBEF6003196DF /* BaseWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDBAF221DCBEF6003196DF /* BaseWallet.m */; };
+		9EBDBAF621DDA58F003196DF /* jingtum.html in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDBAF521DDA58F003196DF /* jingtum.html */; };
+		9EBDBAF821DDAD28003196DF /* jcc_oc_base_lib.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDBAF721DDAD28003196DF /* jcc_oc_base_lib.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		7D76336146680C6E9A7687C7 /* Pods-jcc_oc_base_libTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_oc_base_libTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_oc_base_libTests/Pods-jcc_oc_base_libTests.release.xcconfig"; sourceTree = "<group>"; };
 		89BD706275444742C5716245 /* Pods-jcc_oc_base_lib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_oc_base_lib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_oc_base_lib/Pods-jcc_oc_base_lib.debug.xcconfig"; sourceTree = "<group>"; };
-		9E03883721DC9F2D001061B5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		9E03883821DC9F2D001061B5 /* jingtum.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jingtum.js; sourceTree = "<group>"; };
 		9E30262621DC5311002A88ED /* jcc_oc_base_lib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = jcc_oc_base_lib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E30262A21DC5311002A88ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		9EBDBAEA21DCBE93003196DF /* JingtumWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JingtumWallet.m; sourceTree = "<group>"; };
 		9EBDBAF121DCBEF6003196DF /* BaseWallet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWallet.h; sourceTree = "<group>"; };
 		9EBDBAF221DCBEF6003196DF /* BaseWallet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWallet.m; sourceTree = "<group>"; };
+		9EBDBAF521DDA58F003196DF /* jingtum.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jingtum.html; sourceTree = "<group>"; };
+		9EBDBAF721DDAD28003196DF /* jcc_oc_base_lib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = jcc_oc_base_lib.podspec; sourceTree = "<group>"; };
 		B2A2C89D8CCC3698DCCFD45E /* Pods-jcc_oc_base_libTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_oc_base_libTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_oc_base_libTests/Pods-jcc_oc_base_libTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB6DD366FE5C16E3DFC53B06 /* Pods-jcc_oc_base_lib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_oc_base_lib.release.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_oc_base_lib/Pods-jcc_oc_base_lib.release.xcconfig"; sourceTree = "<group>"; };
 		BB9A5FCF0E26C26683444470 /* libPods-jcc_oc_base_lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jcc_oc_base_lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +95,7 @@
 		9E03883621DC9F2D001061B5 /* JingtumWebview */ = {
 			isa = PBXGroup;
 			children = (
-				9E03883721DC9F2D001061B5 /* index.html */,
+				9EBDBAF521DDA58F003196DF /* jingtum.html */,
 				9E03883821DC9F2D001061B5 /* jingtum.js */,
 			);
 			path = JingtumWebview;
@@ -103,6 +104,7 @@
 		9E30261C21DC5311002A88ED = {
 			isa = PBXGroup;
 			children = (
+				9EBDBAF721DDAD28003196DF /* jcc_oc_base_lib.podspec */,
 				9E30265121DC69C2002A88ED /* Podfile */,
 				9E30262821DC5311002A88ED /* jcc_oc_base_lib */,
 				9E30263321DC5311002A88ED /* jcc_oc_base_libTests */,
@@ -266,7 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E03883921DC9F2D001061B5 /* index.html in Resources */,
+				9EBDBAF821DDAD28003196DF /* jcc_oc_base_lib.podspec in Resources */,
+				9EBDBAF621DDA58F003196DF /* jingtum.html in Resources */,
 				9E30265221DC69C2002A88ED /* Podfile in Resources */,
 				9E03883A21DC9F2D001061B5 /* jingtum.js in Resources */,
 			);
@@ -276,7 +279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E03884921DCB090001061B5 /* index.html in Resources */,
 				9E03884A21DCB138001061B5 /* jingtum.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

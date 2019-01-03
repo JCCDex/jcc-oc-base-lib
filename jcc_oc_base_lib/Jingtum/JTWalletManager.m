@@ -17,6 +17,9 @@
 @property (nonatomic, strong) WKWebView *webView;
 @end
 
+/**
+ manage jingtum & jingtum alliance chains.
+ */
 @implementation JTWalletManager
 
 + (instancetype)shareInstance {
@@ -29,23 +32,23 @@
     return manager;
 }
 
-- (void)createWallet:(NSString *)chain completion:(void (^)(JingtumWallet *, NSError *))completion {
+- (void)createWallet:(NSString *)chain completion:(void (^)(NSError *, JingtumWallet *))completion {
     __weak typeof(self) weakSelf = self;
     [_bridge callHandler:@"createJingtumWallet" data:chain responseCallback:^(id responseData) {
         if ([responseData isKindOfClass:[NSDictionary class]]) {
             JingtumWallet *wallet = [JingtumWallet mj_objectWithKeyValues:responseData];
             if (completion) {
-                completion(wallet, nil);
+                completion(nil, wallet);
             }
         } else {
             if (completion) {
-                completion(nil, [weakSelf errorDomain:@"local jingtum.js" reason:@"create wallet unsuccessfully"]);
+                completion([weakSelf errorDomain:@"from jingtum.js" reason:@"create wallet unsuccessfully"], nil);
             }
         }
     }];
 }
 
-- (void)importSecret:(NSString *)secret chain:(NSString *)chain completion:(void (^)(JingtumWallet *, NSError *))completion {
+- (void)importSecret:(NSString *)secret chain:(NSString *)chain completion:(void (^)(NSError *, JingtumWallet *))completion {
     __weak typeof(self) weakSelf = self;
     NSMutableDictionary *parms = [[NSMutableDictionary alloc] initWithCapacity:0];
     [parms setObject:secret forKey:@"secret"];
@@ -55,11 +58,11 @@
         if ([responseData isKindOfClass:[NSDictionary class]]) {
             JingtumWallet *wallet = [JingtumWallet mj_objectWithKeyValues:responseData];
             if (completion) {
-                completion(wallet, nil);
+                completion(nil, wallet);
             }
         } else {
             if (completion) {
-                completion(nil, [weakSelf errorDomain:@"local jingtum.js" reason:@"the secret is invalid"]);
+                completion([weakSelf errorDomain:@"from jingtum.js" reason:@"the secret is invalid"], nil);
             }
         }
     }];
@@ -91,11 +94,6 @@
     }];
 }
 
-- (NSError *)errorDomain:(NSString *)domain reason:(NSString *)reason {
-    NSError *error = [NSError errorWithDomain:domain code:-1 userInfo:@{NSLocalizedDescriptionKey:reason}];
-    return error;
-}
-
 #pragma mark - WebView
 - (WKWebView *)pureWebView {
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
@@ -121,7 +119,7 @@
 
 - (void)loadHtml: (WKWebView*)webView  {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    NSString *htmlPath = [bundle pathForResource:@"index" ofType:@"html"];
+    NSString *htmlPath = [bundle pathForResource:@"jingtum" ofType:@"html"];
     NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
     [webView loadHTMLString:appHtml baseURL:baseURL];
@@ -138,6 +136,11 @@
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     return jsonString;
+}
+
+- (NSError *)errorDomain:(NSString *)domain reason:(NSString *)reason {
+    NSError *error = [NSError errorWithDomain:domain code:-1 userInfo:@{NSLocalizedDescriptionKey:reason}];
+    return error;
 }
 
 @end
