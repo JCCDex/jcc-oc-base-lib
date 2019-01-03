@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "jcc_oc_base_lib"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "An interface for interacting with the blockchain wallet operation for ios"
 
   # This description is used to generate tags and improve search results.
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+   s.ios.deployment_target = "10.7"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "jcc_oc_base_lib"
+  s.source_files  = "jcc_oc_base_lib/**/*.{h,m}"
 #  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "jcc_oc_base_lib/**/*.{html,js}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -130,9 +130,10 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+   s.dependency "MJExtension"
+   s.dependency "WebViewJavascriptBridge"
 
 end
