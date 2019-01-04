@@ -25,6 +25,11 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
+- (void)testShareInstance {
+    JTWalletManager *instance = [JTWalletManager shareInstance];
+    XCTAssertTrue(_jtWalletManager == instance);
+}
+
 - (void)testCreateMoacWallet {
     XCTestExpectation *expectation = [self expectationWithDescription:@"create moac wallet unsuccessfully"];
     [_jtWalletManager createWallet: @"moac" completion:^(NSError *error, JingtumWallet *wallet) {

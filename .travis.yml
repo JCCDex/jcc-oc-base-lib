@@ -1,0 +1,16 @@
+language: objective-c
+before_install: rvm install "ruby-2.5.0"
+xcode_project: jcc_oc_base_lib.xcodeproj
+xcode_scheme: jcc_oc_base_lib
+install:
+- bundle
+- bundle exec pod install
+script: xcodebuild test -workspace jcc_oc_base_lib.xcworkspace -scheme jcc_oc_base_lib
+  -destination 'platform=iOS Simulator,OS=10.2,name=iPhone 7 Plus'
+after_success: slather
+cache:
+  directories:
+  - vendor/bundle
+env:
+  global:
+    secure: HfHwpu+XoFdhr01H5XRiAITFVC+hZD63hV01qVEt+qv3K9M4eW0DSfv83N/4vPtjC6NS7Qd4YTZ+id1RX0MX2u/fUhLBb859uFrt+RG4EtYqQfI6kMFbLxR564GTsCyfnIhzhXNvvVf7goiSZMCvkQk7gARJXlSAlncXOuimpBd9PV2nfxbw2/PYwx6P0ASWPacguV/X8v1HgPv15IRlImRmVcqIZnAbT2VAZRD9UqUi0+oZ9uhI1QPbqd6lFsdN2cXeZK/F16A/Znxj5iP5ApQC4wkp0vlfz/F0kfdfGtLvX1IjY3BB2I3Fdmz9WzEqUXHJfpLu2LW8aYGI6C9uSrjbGHsHIfWlWzAaB9itB8MYcaqu8rRgQ2rPyk6ajF0NlxBzdfqEcQoJyPUQRfUtf6zsqXiXFZdtwLTRxzFxswBOsjWV3THihg/DnhtNa2GSu6A+WqbBe6SKw+orLnwA1CMML42jUSKcFzt1hsia8vhSXZd9nzRajWQyAZhWuICw4vK49DraH9BhpyBdc2fc2vdj70Q5CYRl1VXB6XgZs0lmFJwxi4AciE0nYIFSFWm06El8fF7fH2fh33XC0FVy1YHa4A0+JT3iRmNe0HhkrxK3g/zg1uR2pMAAUith9PKLoCpchgWFCIho/KLvI3bxRXk1L0kTP6QR7mClIAqdrl0=

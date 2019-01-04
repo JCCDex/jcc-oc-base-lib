@@ -14,6 +14,12 @@
 		9E30263021DC5311002A88ED /* jcc_oc_base_lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E30262621DC5311002A88ED /* jcc_oc_base_lib.framework */; };
 		9E30265221DC69C2002A88ED /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9E30265121DC69C2002A88ED /* Podfile */; };
 		9E30265E21DC8328002A88ED /* JccChains.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E30265D21DC8328002A88ED /* JccChains.h */; };
+		9E37F0A621DE85C600D1688B /* libMJExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E37F0A521DE85C600D1688B /* libMJExtension.a */; };
+		9E37F0A821DE85CD00D1688B /* libPods-jcc_oc_base_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E37F0A721DE85CD00D1688B /* libPods-jcc_oc_base_lib.a */; };
+		9E37F0AA21DE85D200D1688B /* libWebViewJavascriptBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E37F0A921DE85D200D1688B /* libWebViewJavascriptBridge.a */; };
+		9E37F0AE21DE872D00D1688B /* libMJExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E37F0AD21DE872D00D1688B /* libMJExtension.a */; };
+		9E37F0B021DE873400D1688B /* libWebViewJavascriptBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E37F0AF21DE873400D1688B /* libWebViewJavascriptBridge.a */; };
+		9E37F0B221DEF7F600D1688B /* spec_helper.rb in Resources */ = {isa = PBXBuildFile; fileRef = 9E37F0B121DEF7F600D1688B /* spec_helper.rb */; };
 		9E8B62EE21DC8ADF004933A1 /* JTWalletManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E8B62EC21DC8ADF004933A1 /* JTWalletManager.h */; };
 		9E8B62EF21DC8ADF004933A1 /* JTWalletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B62ED21DC8ADF004933A1 /* JTWalletManager.m */; };
 		9E8B62F921DC8C69004933A1 /* JTWalletManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B62F821DC8C69004933A1 /* JTWalletManagerTests.m */; };
@@ -23,6 +29,8 @@
 		9EBDBAF421DCBEF6003196DF /* BaseWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBDBAF221DCBEF6003196DF /* BaseWallet.m */; };
 		9EBDBAF621DDA58F003196DF /* jingtum.html in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDBAF521DDA58F003196DF /* jingtum.html */; };
 		9EBDBAF821DDAD28003196DF /* jcc_oc_base_lib.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDBAF721DDAD28003196DF /* jcc_oc_base_lib.podspec */; };
+		9EBDBAFF21DE2F7F003196DF /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 9EBDBAFE21DE2F7E003196DF /* Gemfile */; };
+		E5DC670CB696E37CDB66F593 /* libPods-jcc_oc_base_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E37F0A721DE85CD00D1688B /* libPods-jcc_oc_base_lib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,12 @@
 		9E30263621DC5311002A88ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E30265121DC69C2002A88ED /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E30265D21DC8328002A88ED /* JccChains.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JccChains.h; sourceTree = "<group>"; };
+		9E37F0A521DE85C600D1688B /* libMJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMJExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E37F0A721DE85CD00D1688B /* libPods-jcc_oc_base_lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-jcc_oc_base_lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E37F0A921DE85D200D1688B /* libWebViewJavascriptBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libWebViewJavascriptBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E37F0AD21DE872D00D1688B /* libMJExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMJExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E37F0AF21DE873400D1688B /* libWebViewJavascriptBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libWebViewJavascriptBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E37F0B121DEF7F600D1688B /* spec_helper.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = spec_helper.rb; sourceTree = "<group>"; };
 		9E8B62EC21DC8ADF004933A1 /* JTWalletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTWalletManager.h; sourceTree = "<group>"; };
 		9E8B62ED21DC8ADF004933A1 /* JTWalletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTWalletManager.m; sourceTree = "<group>"; };
 		9E8B62F821DC8C69004933A1 /* JTWalletManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTWalletManagerTests.m; sourceTree = "<group>"; };
@@ -54,6 +68,7 @@
 		9EBDBAF221DCBEF6003196DF /* BaseWallet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWallet.m; sourceTree = "<group>"; };
 		9EBDBAF521DDA58F003196DF /* jingtum.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jingtum.html; sourceTree = "<group>"; };
 		9EBDBAF721DDAD28003196DF /* jcc_oc_base_lib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = jcc_oc_base_lib.podspec; sourceTree = "<group>"; };
+		9EBDBAFE21DE2F7E003196DF /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Gemfile; sourceTree = "<group>"; };
 		B2A2C89D8CCC3698DCCFD45E /* Pods-jcc_oc_base_libTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_oc_base_libTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_oc_base_libTests/Pods-jcc_oc_base_libTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB6DD366FE5C16E3DFC53B06 /* Pods-jcc_oc_base_lib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jcc_oc_base_lib.release.xcconfig"; path = "Pods/Target Support Files/Pods-jcc_oc_base_lib/Pods-jcc_oc_base_lib.release.xcconfig"; sourceTree = "<group>"; };
 		BB9A5FCF0E26C26683444470 /* libPods-jcc_oc_base_lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-jcc_oc_base_lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +80,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E37F0B021DE873400D1688B /* libWebViewJavascriptBridge.a in Frameworks */,
+				9E37F0AE21DE872D00D1688B /* libMJExtension.a in Frameworks */,
 				1B3288C058B8336B13951348 /* libPods-jcc_oc_base_lib.a in Frameworks */,
+				E5DC670CB696E37CDB66F593 /* libPods-jcc_oc_base_lib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E37F0AA21DE85D200D1688B /* libWebViewJavascriptBridge.a in Frameworks */,
+				9E37F0A821DE85CD00D1688B /* libPods-jcc_oc_base_lib.a in Frameworks */,
+				9E37F0A621DE85C600D1688B /* libMJExtension.a in Frameworks */,
 				9E30263021DC5311002A88ED /* jcc_oc_base_lib.framework in Frameworks */,
 				6D502D23613E4DDFD09A0AE3 /* libPods-jcc_oc_base_libTests.a in Frameworks */,
 			);
@@ -104,6 +125,8 @@
 		9E30261C21DC5311002A88ED = {
 			isa = PBXGroup;
 			children = (
+				9E37F0B121DEF7F600D1688B /* spec_helper.rb */,
+				9EBDBAFE21DE2F7E003196DF /* Gemfile */,
 				9EBDBAF721DDAD28003196DF /* jcc_oc_base_lib.podspec */,
 				9E30265121DC69C2002A88ED /* Podfile */,
 				9E30262821DC5311002A88ED /* jcc_oc_base_lib */,
@@ -167,6 +190,11 @@
 		CE84A571A5328CEB42469941 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E37F0AF21DE873400D1688B /* libWebViewJavascriptBridge.a */,
+				9E37F0AD21DE872D00D1688B /* libMJExtension.a */,
+				9E37F0A921DE85D200D1688B /* libWebViewJavascriptBridge.a */,
+				9E37F0A721DE85CD00D1688B /* libPods-jcc_oc_base_lib.a */,
+				9E37F0A521DE85C600D1688B /* libMJExtension.a */,
 				BB9A5FCF0E26C26683444470 /* libPods-jcc_oc_base_lib.a */,
 				C13CC6DBB12E2B555A97B38F /* libPods-jcc_oc_base_libTests.a */,
 			);
@@ -199,6 +227,7 @@
 				9E30262221DC5311002A88ED /* Sources */,
 				9E30262321DC5311002A88ED /* Frameworks */,
 				9E30262421DC5311002A88ED /* Resources */,
+				50172E6EB4AE524B8788DE17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +246,8 @@
 				9E30262B21DC5311002A88ED /* Sources */,
 				9E30262C21DC5311002A88ED /* Frameworks */,
 				9E30262D21DC5311002A88ED /* Resources */,
+				0000FB0FEAEE11D31E83FE16 /* [CP] Embed Pods Frameworks */,
+				ADBB6CA8F1854F9E17851F34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,8 +299,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E37F0B221DEF7F600D1688B /* spec_helper.rb in Resources */,
 				9EBDBAF821DDAD28003196DF /* jcc_oc_base_lib.podspec in Resources */,
 				9EBDBAF621DDA58F003196DF /* jingtum.html in Resources */,
+				9EBDBAFF21DE2F7F003196DF /* Gemfile in Resources */,
 				9E30265221DC69C2002A88ED /* Podfile in Resources */,
 				9E03883A21DC9F2D001061B5 /* jingtum.js in Resources */,
 			);
@@ -286,6 +319,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0000FB0FEAEE11D31E83FE16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jcc_oc_base_libTests/Pods-jcc_oc_base_libTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4B3F80FF1F6CDB24F3D96C69 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,7 +357,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		50172E6EB4AE524B8788DE17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jcc_oc_base_lib/Pods-jcc_oc_base_lib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADBB6CA8F1854F9E17851F34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jcc_oc_base_libTests/Pods-jcc_oc_base_libTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E5BEDB33BB2C11F4E5AF9758 /* [CP] Check Pods Manifest.lock */ = {
@@ -327,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -470,7 +560,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -484,9 +574,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89BD706275444742C5716245 /* Pods-jcc_oc_base_lib.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9397WH72R2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -511,6 +602,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9397WH72R2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -533,6 +625,7 @@
 			baseConfigurationReference = B2A2C89D8CCC3698DCCFD45E /* Pods-jcc_oc_base_libTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9397WH72R2;
 				INFOPLIST_FILE = jcc_oc_base_libTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,6 +643,7 @@
 			baseConfigurationReference = 7D76336146680C6E9A7687C7 /* Pods-jcc_oc_base_libTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9397WH72R2;
 				INFOPLIST_FILE = jcc_oc_base_libTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

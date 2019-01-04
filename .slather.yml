@@ -1,0 +1,6 @@
+coverage_service: coveralls
+ci_service: travis_pro
+xcodeproj: jcc_oc_base_lib.xcodeproj
+scheme: jcc_oc_base_lib
+ignore:
+  - "*/Pods/*"
