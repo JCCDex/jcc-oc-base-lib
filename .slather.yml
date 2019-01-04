@@ -1,0 +1,4 @@
+xcodeproj: jcc_oc_base_lib.xcodeproj
+scheme: jcc_oc_base_lib
+workspace: jcc_oc_base_lib.xcworkspace
+source_directory: jcc_oc_base_lib

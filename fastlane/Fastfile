@@ -1,0 +1,41 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+setup_travis
+
+platform :ios do
+  desc "Description of what the lane does"
+
+  lane :test do
+  run_tests(
+    workspace: "jcc_oc_base_lib.xcworkspace",
+    scheme: "jcc_oc_base_lib"
+  )
+  end
+
+  after_all do
+  slather(
+    cobertura_xml: true,
+    coveralls: true,
+    proj: "jcc_oc_base_lib.xcodeproj",
+    ignore: "Pods/**/*",
+    scheme: "jcc_oc_base_lib",
+    workspace: "jcc_oc_base_lib.xcworkspace",
+    html: true
+  )
+  end
+  
+end

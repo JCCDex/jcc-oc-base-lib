@@ -1,8 +1,11 @@
 
 # jcc-oc-base-lib
 
-An interface for interacting with the blockchain wallet operation for ios
+An interface for interacting with the blockchain wallet operation for ios.
 
+[![Pod version](https://badge.fury.io/co/jcc_oc_base_lib.svg)](https://badge.fury.io/co/jcc_oc_base_lib)
+[![Build Status](https://travis-ci.com/JCCDex/jcc-oc-base-lib.svg?branch=master)](https://travis-ci.com/JCCDex/jcc-oc-base-lib)
+[![Coverage Status](https://coveralls.io/repos/github/JCCDex/jcc-oc-base-lib/badge.svg?branch=dev)](https://coveralls.io/github/JCCDex/jcc-oc-base-lib?branch=dev)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Installation with CocoaPods

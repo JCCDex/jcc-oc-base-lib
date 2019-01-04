@@ -25,6 +25,11 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
+- (void)testShareInstance {
+    JTWalletManager *instance = [JTWalletManager shareInstance];
+    XCTAssertTrue(_jtWalletManager == instance);
+}
+
 - (void)testCreateMoacWallet {
     XCTestExpectation *expectation = [self expectationWithDescription:@"create moac wallet unsuccessfully"];
     [_jtWalletManager createWallet: @"moac" completion:^(NSError *error, JingtumWallet *wallet) {
@@ -89,6 +94,18 @@
     [_jtWalletManager isValidAddress:@"shWSppK2jFUGg2tMhfaLVs7fDWinW" chain:BIZAIN_CHAIN completion:^(BOOL isValid) {
         XCTAssertFalse(isValid);
         [e4 fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10.0 handler:nil];
+}
+
+- (void)testImportSecret {
+    XCTestExpectation *e1 = [self expectationWithDescription:@"import invalid secret"];
+    
+    [_jtWalletManager importSecret:@"1" chain:SWTC_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
+        XCTAssertNotNil(error);
+        XCTAssertNil(wallet);
+        [e1 fulfill];
     }];
     
     [self waitForExpectationsWithTimeout:10.0 handler:nil];
