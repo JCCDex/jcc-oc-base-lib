@@ -31,7 +31,7 @@ platform :ios do
     cobertura_xml: true,
     coveralls: true,
     proj: "jcc_oc_base_lib.xcodeproj",
-    ignore: "Pods/**/*",
+    ignore: ["Pods/**/*", "jcc_oc_base_libTests/**"],
     scheme: "jcc_oc_base_lib",
     workspace: "jcc_oc_base_lib.xcworkspace",
     html: true
