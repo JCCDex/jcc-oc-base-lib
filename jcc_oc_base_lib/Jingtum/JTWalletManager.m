@@ -53,7 +53,7 @@
     NSMutableDictionary *parms = [[NSMutableDictionary alloc] initWithCapacity:0];
     [parms setObject:secret forKey:@"secret"];
     [parms setObject:chain forKey:@"chain"];
-    NSString *json = [weakSelf dataTojsonString:parms];
+    NSString *json = [parms mj_JSONString];
     [_bridge callHandler:@"importJingtumSecret" data:json responseCallback:^(id responseData) {
         if ([responseData isKindOfClass:[NSDictionary class]]) {
             JingtumWallet *wallet = [JingtumWallet mj_objectWithKeyValues:responseData];
@@ -69,11 +69,10 @@
 }
 
 - (void)isValidAddress:(NSString *)address chain:(NSString *)chain completion:(void (^)(BOOL))completion {
-    __weak typeof(self) weakSelf = self;
     NSMutableDictionary *parms = [[NSMutableDictionary alloc] initWithCapacity:0];
     [parms setObject:address forKey:@"address"];
     [parms setObject:chain forKey:@"chain"];
-    NSString *json = [weakSelf dataTojsonString:parms];
+    NSString *json = [parms mj_JSONString];
     [_bridge callHandler:@"isJingtumAddress" data:json responseCallback:^(id responseData) {
         if(completion) {
             completion([responseData boolValue]);
@@ -82,11 +81,10 @@
 }
 
 - (void)isValidSecret:(NSString *)secret chain:(NSString *)chain completion:(void (^)(BOOL))completion {
-    __weak typeof(self) weakSelf = self;
     NSMutableDictionary *parms = [[NSMutableDictionary alloc] initWithCapacity:0];
     [parms setObject:secret forKey:@"secret"];
     [parms setObject:chain forKey:@"chain"];
-    NSString *json = [weakSelf dataTojsonString:parms];
+    NSString *json = [parms mj_JSONString];
     [_bridge callHandler:@"isJingtumSecret" data:json responseCallback:^(id responseData) {
         if(completion) {
             completion([responseData boolValue]);
@@ -100,7 +98,7 @@
     [parms setObject:transaction forKey:@"transaction"];
     [parms setObject:secret forKey:@"secret"];
     [parms setObject:chain forKey:@"chain"];
-    NSString *json = [weakSelf dataTojsonString:parms];
+    NSString *json = [parms mj_JSONString];
     [_bridge callHandler:@"jingtumSign" data:json responseCallback:^(id responseData) {
         if ([responseData isKindOfClass:[NSString class]]) {
             if (completion) {
@@ -143,19 +141,6 @@
     NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
     [webView loadHTMLString:appHtml baseURL:baseURL];
-}
-
-- (NSString *)dataTojsonString:(id)object {
-    
-    NSString *jsonString = nil;
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingPrettyPrinted error:&error];
-    if (!jsonData) {
-        NSLog(@"error: %@", error);
-    } else {
-        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-    return jsonString;
 }
 
 - (NSError *)errorDomain:(NSString *)domain reason:(NSString *)reason {
