@@ -5,8 +5,8 @@ cache:
 before_install:
   - pod repo update > /dev/null
 install:
-  - bundle install
   - bundle update
+  - bundle install
   - bundle exec pod install
 script:
   - fastlane test
