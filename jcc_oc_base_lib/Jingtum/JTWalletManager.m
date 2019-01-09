@@ -122,17 +122,16 @@
 }
 
 - (void)initJingtumWebview {
-    if (_bridge) {
-        return;
+    if (!_bridge) {
+        self.webView = [self pureWebView];
+        self.webView.navigationDelegate = self;
+        self.webView.UIDelegate = self;
+        [WebViewJavascriptBridge enableLogging];
+        _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+        [_bridge setWebViewDelegate:self];
+        [self loadHtml:self.webView];
+        [[UIApplication sharedApplication].keyWindow addSubview:self.webView];
     }
-    self.webView = [self pureWebView];
-    self.webView.navigationDelegate = self;
-    self.webView.UIDelegate = self;
-    [WebViewJavascriptBridge enableLogging];
-    _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
-    [_bridge setWebViewDelegate:self];
-    [self loadHtml:self.webView];
-    [[UIApplication sharedApplication].keyWindow addSubview:self.webView];
 }
 
 - (void)loadHtml: (WKWebView*)webView  {
