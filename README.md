@@ -95,3 +95,5 @@ NSString *chain = SWTC_CHAIN;
     // the error is nil if locally sign successfully.
 }];
 ```
+
+For more structure of transaction data, see [jcc_exchange](https://github.com/JCCDex/jcc_exchange/blob/master/src/tx.js).
